@@ -38,3 +38,39 @@ button {
 button:hover {
   background-color: #333;
 }
+
+.card {
+  background: black;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.game-preview {
+  width: 300px;
+  height: 400px;
+  background: gray;
+  margin-bottom: 10px;
+}
+
+.game-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.borrow-button {
+  background-color: #0074cc;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.borrow-button:hover {
+  background-color: #005fa3;
+}
