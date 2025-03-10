@@ -5,12 +5,16 @@ body {
   overflow-y: auto;
   height: 100vh;
   text-align: center;
-  background: linear-gradient(135deg, #ff1a1a, #1a8cff);
+  background: linear-gradient(135deg, #ff1a1a, #1a8cff) no-repeat;
+  background-size: 100% 100vh;
+  background-attachment: fixed;
+  background-color: #1a8cff;
   font-family: "Arial", sans-serif;
   color: white;
 }
+
 img {
-  width: 150px;
+  width: 30%;
   height: auto;
   margin-bottom: 20px;
 }
@@ -112,4 +116,12 @@ button:hover {
   .card {
     flex: 1 1 100%;
   }
+}
+
+.index-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
