@@ -125,3 +125,40 @@ button:hover {
   align-items: center;
   height: 100vh;
 }
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 20px;
+  background: black;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3s);
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu li:hover {
+  background: #333;
+}
+
+.menu .disabled {
+  color: gray;
+  cursor: not-allowed;
+}
