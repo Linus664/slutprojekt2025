@@ -52,3 +52,18 @@ document.addEventListener("DOMContentLoaded", () => {
     container.appendChild(card);
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.querySelector(".hamburger");
+  const menu = document.querySelector(".menu");
+
+  hamburger.addEventListener("click", () => {
+    menu.style.display = menu.style.display === "block" ? "none" : "block";
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!hamburger.contains(event.target) && !menu.contains(event.target)) {
+      menu.style.display = "none";
+    }
+  });
+});
