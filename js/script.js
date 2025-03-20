@@ -48,10 +48,19 @@ document.addEventListener("DOMContentLoaded", () => {
     card.innerHTML = `
       <img src="${game.image}" class="game-preview">
       <p class="game-title">${game.title}</p>
+      <span class="favorite-star ${
+        game.favorite ? "favorited" : ""
+      }" data-title="${game.title}">&#9733;</span>
       <button class="borrow-button">Borrow</button>
     `;
 
     container.appendChild(card);
+  });
+  document.querySelectorAll(".favorite-star").forEach((star) => {
+    star.addEventListener("click", (event) => {
+      const title = event.target.getAttribute("data-title");
+      const isFavorited = event.target.classList.toggle("favorited");
+    });
   });
 });
 
