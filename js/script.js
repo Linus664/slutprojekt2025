@@ -39,6 +39,8 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
   const container = document.getElementById("cardContainer");
 
+  if (!window.location.pathname.includes("browse.html")) return;
+
   games.forEach((game) => {
     const card = document.createElement("div");
     card.classList.add("card");
