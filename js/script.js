@@ -37,7 +37,11 @@ document.addEventListener("DOMContentLoaded", () => {
       image: "games/Metroid.jpg",
     },
   ];
-  const container = document.getElementById("cardContainer");
+  const savedGames = JSON.parse(localStorage.getItem("games")) || {};
+  games.forEach((game) => {
+¨    game.favourite = savedGames[game.title];
+  });
+ ¨ const container = document.getElementById("cardContainer");
 
   if (!window.location.pathname.includes("browse.html")) return;
 
@@ -60,6 +64,8 @@ document.addEventListener("DOMContentLoaded", () => {
     star.addEventListener("click", (event) => {
       const title = event.target.getAttribute("data-title");
       const isFavorited = event.target.classList.toggle("favorited");
+      savedGames[title] = isFavorited;
+      localStorage.setItem("games", JSON.stringify(savedGames));
     });
   });
 });
