@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem("favorites", JSON.stringify(savedFavorites));
 
         if (currentPage.includes("favorites.html")) {
-          renderFavorites();
+          renderGames(games.filter((game) => savedFavorites(games.title)));
         }
       });
     });
@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem("borrowed", JSON.stringify(borrowedGames));
 
         if (currentPage.includes("borrowed.html")) {
-          renderBorrowed();
+          renderGames(games.filter((game) => savedFavorites(games.title)));
         }
       });
     });
